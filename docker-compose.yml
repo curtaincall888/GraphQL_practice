@@ -1,0 +1,19 @@
+version: "3"
+services:
+  frontend:
+    build: ./
+    command: sh -c "yarn run dev"
+    container_name: "Portfolio_Frontend"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src:/app
+    stdin_open: true
+    tty: true
+# rails と 連携する場合はコメントアウトを外す
+#     networks:
+#       external-network:
+#         ipv4_address: 192.168.192.2
+# networks:
+#   external-network:
+#     external: true
