@@ -1,9 +1,9 @@
-version: "3"
+version: "3.9"
 services:
   app:
     build: ./
     command: sh -c "yarn run dev"
-    container_name: "Portfolio_Frontend"
+    container_name: "GraphQL_next"
     ports:
       - "3000:3000"
     volumes:
