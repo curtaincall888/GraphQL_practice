@@ -6,6 +6,8 @@ services:
     container_name: "GraphQL_next"
     ports:
       - "3000:3000"
+      # prisma studio 用
+      - "5555:5555"
     volumes:
       - ./src:/app
     stdin_open: true
