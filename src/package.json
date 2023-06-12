@@ -25,6 +25,7 @@
     "eslint-config-next": "13.4.4",
     "next": "13.4.4",
     "next-auth": "^4.22.1",
+    "nodemailer": "^6.9.3",
     "postcss": "^8.4.24",
     "prettier": "^2.8.8",
     "react": "18.2.0",
