@@ -1,0 +1,14 @@
+generates:
+  ./generated/schema.graphql:
+    schema:
+      - './graphql/typeDefs/**/*.graphql'
+    plugins:
+      - schema-ast
+  ./generated/resolvers-types.ts:
+    schema:
+      - './graphql/typeDefs/**/*.graphql'
+    plugins:
+      - typescript
+      - typescript-resolvers
+    config:
+      contextType: '../graphql/context#Context'
