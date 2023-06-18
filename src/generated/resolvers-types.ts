@@ -38,7 +38,7 @@ export type MutationDeleteTodoArgs = {
 
 
 export type MutationUpdateTodoArgs = {
-  compoleted?: InputMaybe<Scalars['Boolean']['input']>;
+  completed?: InputMaybe<Scalars['Boolean']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
   todoId: Scalars['String']['input'];
 };

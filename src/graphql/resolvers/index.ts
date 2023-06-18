@@ -28,7 +28,7 @@ export const resolvers: Resolvers = {
     },
     updateTodo: async (
       _,
-      { todoId, title, compoleted },
+      { todoId, title, completed },
       { prisma, currentUser }
     ) => {
       if (!currentUser) {
@@ -42,8 +42,8 @@ export const resolvers: Resolvers = {
         where: { id: todoId },
         data: {
           ...(title && { title }),
-          ...(compoleted !== undefined && compoleted !== null
-            ? { compoleted }
+          ...(completed !== undefined && completed !== null
+            ? { completed }
             : {}),
         },
         include: { user: true },
