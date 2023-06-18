@@ -10,8 +10,7 @@ import path from 'path'
 
 const cors = Cors()
 
-const schemaPath = path.join(process.cwd(), './generated/schema.graphql')
-const schema = loadSchemaSync(schemaPath, {
+const schema = loadSchemaSync('./generated/schema.graphql', {
   loaders: [new GraphQLFileLoader()],
 })
 const schemaWithResolvers = addResolversToSchema({
